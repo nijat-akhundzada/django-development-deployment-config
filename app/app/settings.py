@@ -28,6 +28,10 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+LOCAL_APPS = [
+
+]
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -37,6 +41,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Our apps
+    'helpers.apps.HelpersConfig',
+    *LOCAL_APPS,
+    # Third-party apps
+    'rest_framework',
+    # 'drf_spectacular',
 ]
 
 MIDDLEWARE = [
