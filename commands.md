@@ -6,5 +6,6 @@ docker-compose -f docker-compose-deploy.yml build
 docker-compose -f docker-compose-deploy.yml up
 Command to create secret key for settings.py
 python -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())'
+python -c 'from secrets import token_hex; print(token_hex(16))'
 Command to remove unused data
 docker system prune
